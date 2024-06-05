@@ -1,0 +1,16 @@
+#!/bin/bash
+#################################
+# Author: Tanay
+# Date: 05-06-2024
+# This script outputs the node health
+# version: 1
+#################################
+
+echo "Print the disk space"
+df -h
+
+echo "Print the Memory"
+free -g
+
+echo "print the CPU"
+nproc
