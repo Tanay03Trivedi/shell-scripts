@@ -2,6 +2,26 @@
 #################################
 # Author: Tanay
 # Date: 10-06-2024
-# This script outputs the aws resources
+# This script outputs the AWS resources
 # version: 1
 #################################
+# AWS S3
+# AWS EC2
+# AWS Lambdad
+# AWS IAM users
+
+# List S3 buckets
+echo "List of S3 buckets"
+aws s3 ls
+
+# List EC2 instances
+echo "List all Ec2 instances"
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+
+# List Lambda
+echo "All Lambda Functions"
+aws lambda list-functions
+
+# list IAM users
+echo "List all IAM users"
+aws iam list-users
